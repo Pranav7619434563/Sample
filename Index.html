@@ -1,33 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Stage X: Echo Layer</title>
+    <meta charset="UTF-8" />
+    <title>Agent Mission Stages</title>
     <style>
       body {
-        background-color: #0a0a0a;
-        color: #ccc;
+        background-color: #000;
+        color: #fff;
         font-family: Consolas, monospace;
+        margin: 0;
         padding: 20px;
       }
-      .hidden {
+      .stage {
         display: none;
       }
-
-      .secret::after {
-        content: "invisicode42";
+      .active {
+        display: block;
+      }
+      #controls {
+        margin-top: 20px;
+        text-align: center;
+      }
+      button {
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #555;
       }
     </style>
   </head>
   <body>
-    <h1>Stage X: Echo Layer</h1>
-    <p>The answer is not displayed openly — but it still exists in the page's design.</p>
-    <p>Hint: "Look for clues in the page’s hidden elements, where secrets can be encoded in plain sight."</p>
+    <div id="stageContainer">
+      <!-- Stage 1 -->
+      <div class="stage active">
+        <h1>Welcome Agent.</h1>
+        <p>Your first mission: retrieve the access key.</p>
+        <p>Hint: “Sometimes, secrets lie in reversed reality.”</p>
 
-    <div class="hidden">Red herring</div>
-    <p class="secret"></p>
+        <!-- begin-log -->
+        <!-- system-init: true -->
+        <!-- user: player_01 -->
+        <!-- secure-id: 09183-xyz -->
+        <!-- stage: 1 -->
+        <!-- encoded-msg: 90Xez@ssap -->
+        <!-- log-end -->
+
+        <script>
+          const password = atob("d2FybmluZzEyMw=="); // "warning123"
+          console.log("Access Denied");
+        </script>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="stage">
+        <h1>Welcome Back, Agent.</h1>
+        <p>The shadows hold the truth, but not as they seem.</p>
+        <p>Hint: “Reflections may correct the distorted.”</p>
+
+        <!-- --BEGIN-ECHO-- -->
+        <!-- data-packet: 321tn0m@drowssap -->
+        <!-- echo-channel: 4558:enabled -->
+        <!-- trace-flag: false -->
+        <!-- --END-ECHO-- -->
+
+        <script>
+          function unusedDecode(str) {
+            return str
+              .split("")
+              .map((c) => String.fromCharCode(c.charCodeAt(0) + 1))
+              .join("");
+          }
+
+          const accessOverride = btoa("redherring");
+          console.warn("System Unstable");
+        </script>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="stage">
+        <h1>Agent, you’ve intercepted a corrupted transmission.</h1>
+        <p>Hint: “Fragments form the truth when placed in sequence.”</p>
+
+        <!-- signal-frag-1: p4ss -->
+        <!-- trace-id: 777x -->
+        <!-- signal-frag-3: ector -->
+        <!-- deprecated: true -->
+        <!-- signal-frag-2: r3d_d -->
+        <!-- internal-ref: 9982 -->
+
+        <script>
+          const tempKey = atob("bG9zdGZpbGU="); // "lostfile"
+          console.error("Decryption failed: Missing fragments.");
+        </script>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="stage">
+        <h1>Agent, the echoes of data must be pieced together.</h1>
+        <p>Hint: "The right order reveals the path."</p>
+
+        <!-- echo-frag-2: fox -->
+        <!-- trace-id: 0091 -->
+        <!-- echo-frag-3: _den -->
+        <!-- session-token: invalid -->
+        <!-- echo-frag-1: gol -->
+
+        <script>
+          // decoder file missing, unable to reconstruct key
+          const fakeKey = atob("ZmFrZV9maWxl"); // "fake_file"
+          console.warn("Warning: Missing sequence detected.");
+        </script>
+      </div>
+
+      <!-- Stage 5 -->
+      <div class="stage">
+        <h1>Echo Layer</h1>
+        <p>
+          The answer is not displayed openly — but it still exists somewhere in
+          the page.
+        </p>
+        <p>
+          Hint: "Look for clues in the page’s hidden elements(invisicode), where
+          secrets can be encoded in plain sight."
+        </p>
+
+        <p class="secret"></p>
+
+        <script>
+          console.log("System status: Secure");
+        </script>
+      </div>
+      <!-- Stage 6 -->
+      <div class="stage">
+        <h1>Agent, silence carries secrets.</h1>
+        <p>Hint: "The odd one speaks."</p>
+
+        <!-- code-list: silent still noise secret -->
+        <!-- clue: odd words might reveal it -->
+        <!-- session-status: standby -->
+
+        <script>
+          const fakeWarning = atob("d2F0Y2hmb3J0aGV0cmFw"); // "watchforthetrap"
+          console.error("Caution: Suspicious activity logged.");
+        </script>
+      </div>
+      <!-- Stage 7 -->
+      <div class="stage">
+        <h1>Agent, not all trails are lost — some just fade.</h1>
+        <p>Hint: "Focus on what stands last."</p>
+
+        <!-- trail-log: mist dusk dawn ember -->
+        <!-- guidance: last light holds the way -->
+        <!-- server-status: unstable -->
+
+        <script>
+          const falseAlarm = atob("d3JvbmdfZW50cnk="); // "wrong_entry"
+          console.warn("Notice: Signal distortion detected.");
+        </script>
+      </div>
+      <!-- Stage 8 -->
+      <div class="stage">
+        <h1>Agent, the passcode lies beneath the surface.</h1>
+        <p>Hint: "The code is hidden within the letters."</p>
+
+        <!-- clue: acbcde -->
+        <!-- password_hint: rearrange the letters -->
+      </div>
+      <!--Stage 9-->
+      <div class="stage">
+        <h1>Agent, not everything appears as it should.</h1>
+        <p>Hint: "Some fragments are written backwards. "</p>
+
+        <!-- fragment-1: 3rc -->
+        <!-- fragment-2: ot -->
+        <!-- fragment-3: sir -->
+
+        <script>
+          // mirror error
+          console.error("Data reflection unstable.");
+        </script>
+      </div>
+      <!--Stage 10-->
+      <div class="stage">
+        <h1>Agent, find the code within the numbers.</h1>
+        <p>Hint: "The numbers represent a simple shift."</p>
+
+        <!-- clue: 3 1 20 5 18 -->
+        <!-- password_hint: alphabet shift -->
+      </div>
+    </div>
+    <!--Stage 11-->
+    <div class="stage">
+      <h1>Agent, the tale is a puzzle itself.</h1>
+      <p>Hint: "Password lies within the bold words.Money plays a key role!!"</p>
+
+      <p>The <b>Silent</b> <b>Horizon</b> <b>Opens</b> <b>Wonders</b>.</p>
+
+      <script>
+        // data jammed at node 52
+        console.log("System unstable.");
+      </script>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls">
+      <button onclick="prevStage()">Previous</button>
+      <button onclick="nextStage()">Next</button>
+    </div>
 
     <script>
-      console.log("System status: Secure");
+      let currentStage = 0;
+      const stages = document.querySelectorAll(".stage");
+
+      function showStage(index) {
+        stages.forEach((stage) => stage.classList.remove("active"));
+        stages[index].classList.add("active");
+      }
+
+      function nextStage() {
+        currentStage = (currentStage + 1) % stages.length;
+        showStage(currentStage);
+      }
+
+      function prevStage() {
+        currentStage = (currentStage - 1 + stages.length) % stages.length;
+        showStage(currentStage);
+      }
     </script>
   </body>
 </html>
